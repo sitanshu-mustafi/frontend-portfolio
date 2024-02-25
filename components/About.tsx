@@ -3,18 +3,18 @@ import React from 'react';
 const About = () => {
   const highlightText = (text: string) => {
     return (
-      <span className='text-green-50 text-xs font-medium px-0.5 font-poppins'>
+      <span className='text-green-50 text-xs font-medium px-0.5 font-poppins lg:text-lg'>
         {text}
       </span>
     );
   };
 
   return (
-    <div className='flex gap-2 md:items-end justify-between padding-container flex-col lg:px-10 bg-yellow-10 rounded-lg py-5'>
-      <h1 className='font-poppins font-semibold sm:text-center xs:text-center'>
-        Development Journey
+    <div className='flex gap-2 md:items-end justify-between padding-container flex-col lg:px-10 bg-yellow-10 rounded-lg py-5 xl:mx-10'>
+      <h1 className='font-poppins font-semibold sm:text-center xs:text-center lg:text-lg'>
+        Development Journey: 2020 - Present
       </h1>
-      <p className='font-recoleta font-thin text-xs text-justify mt-1 md:leading-loose lg:text-sm'>
+      <p className='font-recoleta font-thin text-xs text-justify mt-1 md:leading-loose lg:text-lg'>
         I have a knack for crafting awesome user interfaces. With some
         experience under my belt, I've become pretty handy with{' '}
         {highlightText('NextJs')} and {highlightText('TypeScript')}. I love
