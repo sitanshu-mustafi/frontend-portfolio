@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        recoleta: ['var(--font-recoleta)', 'sans-serif'],
+        duospace: ['var(--font-duospace)', 'sans-serif'],
+      },
       colors: {
         green: {
           50: '#30AF5B',
