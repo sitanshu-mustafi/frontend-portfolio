@@ -3,7 +3,7 @@ import React from 'react';
 
 const LandingPage = () => {
   return (
-    <div className='flex flex-col md:flex-row lg:flex-row items-center container w-full py-10 sm:justify-center sm:items-center'>
+    <div className='flex flex-col md:flex-row lg:flex-row items-center container w-full pt-5 sm:justify-center sm:items-center'>
       <section className='md:w-1/2 md:order-last'>
         <Image
           src={'/portfolioBg.png'}

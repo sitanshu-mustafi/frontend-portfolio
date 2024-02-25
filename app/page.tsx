@@ -1,16 +1,16 @@
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import LandingPage from '@/components/LandingPage';
-import Projects from '@/components/Projects';
+import Experience from '@/components/Experience';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <>
+    <div className='flex flex-col gap-4'>
       <LandingPage />
       <About />
-      <Projects />
-      <Contact />
-    </>
+      <Experience />
+      {/* <Contact /> */}
+    </div>
   );
 }

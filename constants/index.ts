@@ -1,8 +1,8 @@
 export const NAV_LINKS = [
   {
     href: '/',
-    key: 'projects',
-    label: '/projects',
+    key: 'experience',
+    label: '/experience',
   },
   {
     href: '/',

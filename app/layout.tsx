@@ -37,10 +37,10 @@ export default function RootLayout({
       style={{ fontFamily: 'Poppins' }}
     >
       <body className=' bg-green-10 flex items-center justify-center h-full py-10 px-10'>
-        <div className='bg-white container padding-container rounded-lg h-full w-full drop-shadow-2xl'>
+        <div className='bg-white container padding-container rounded-lg h-full w-full drop-shadow-2xl overflow-x-auto pb-10'>
           <Navbar />
           <main className='relative overflow-hidden'>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>
