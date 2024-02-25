@@ -5,9 +5,9 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className='flexBetween max-container border-b-2 border-black z-30 pt-10 pb-2 px-2'>
+    <nav className='flexBetween max-container border-b-2 border-black z-30 pt-10 pb-2 px-2 sticky top-0 bg-white'>
       <Link href='/'>
-        <p className='font-duospace font-bold'>&lt;dev /&gt;</p>
+        <p className='font-duospace font-bold'>&lt;sitanshu /&gt;</p>
       </Link>
       <ul className='hidden h-full gap-12 lg:flex'>
         {NAV_LINKS.map((link) => (

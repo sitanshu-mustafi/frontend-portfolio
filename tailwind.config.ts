@@ -35,6 +35,9 @@ module.exports = {
           10: '#FFE879',
           50: '#FEC601',
         },
+        pink: {
+          10: '#F2C2CA',
+        },
       },
       backgroundImage: {
         'bg-img-1': "url('/img-1.png')",
