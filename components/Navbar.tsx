@@ -5,16 +5,16 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className='flexBetween max-container border-b-2 border-black z-30 py-2'>
+    <nav className='flexBetween max-container border-b-2 border-black z-30 pt-10 pb-2 px-2'>
       <Link href='/'>
-        <p className='font-duospace font-bold'>/index</p>
+        <p className='font-duospace font-bold'>&lt;dev /&gt;</p>
       </Link>
       <ul className='hidden h-full gap-12 lg:flex'>
         {NAV_LINKS.map((link) => (
           <Link
             href={link.href}
             key={link.key}
-            className='font-duospace regular-16 pb-1.5 text-gray-50 flexCenter cursor-pointer transition-all hover:font-bold'
+            className='font-duospace regular-14 text-gray-50 flexCenter cursor-pointer transition-all hover:font-bold'
           >
             {link.label}
           </Link>

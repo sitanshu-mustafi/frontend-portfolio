@@ -10,11 +10,13 @@ module.exports = {
       fontFamily: {
         recoleta: ['var(--font-recoleta)', 'sans-serif'],
         duospace: ['var(--font-duospace)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
       },
       colors: {
         green: {
           50: '#30AF5B',
           90: '#292C27',
+          10: '#EAF9F1',
         },
         gray: {
           10: '#EEEEEE',
@@ -30,6 +32,7 @@ module.exports = {
           70: '#021639',
         },
         yellow: {
+          10: '#FFE879',
           50: '#FEC601',
         },
       },
@@ -42,6 +45,11 @@ module.exports = {
       },
       screens: {
         xs: '400px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
         '3xl': '1680px',
         '4xl': '2200px',
       },
