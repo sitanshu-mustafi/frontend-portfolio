@@ -20,6 +20,8 @@ export const CompanyCard = () => {
             height={100}
             alt={'spar_logo'}
             className='rounded-md'
+            layout='responsive'
+            style={{ objectFit: 'contain' }}
           />
           <Image
             src={'/apollo_logo.png'}
@@ -27,6 +29,8 @@ export const CompanyCard = () => {
             height={100}
             alt={'apollo_logo'}
             className='rounded-md'
+            layout='responsive'
+            style={{ objectFit: 'contain' }}
           />
           <Image
             src={'/twd_logo.png'}
@@ -34,6 +38,8 @@ export const CompanyCard = () => {
             height={100}
             alt={'twd_logo'}
             className='rounded-md'
+            layout='responsive'
+            style={{ objectFit: 'contain' }}
           />
           <Image
             src={'/una_brands_logo.jpg'}
@@ -41,6 +47,8 @@ export const CompanyCard = () => {
             height={100}
             alt={'una_brands_logo'}
             className='rounded-md'
+            layout='responsive'
+            style={{ objectFit: 'contain' }}
           />
         </div>
       </>
@@ -48,7 +56,7 @@ export const CompanyCard = () => {
   };
 
   return (
-    <section className='flex sm:flex-row justify-between xs:items-center sm:item-start py-5 xs:flex-col lg:items-start'>
+    <div className='flex sm:flex-row justify-center items-center sm:item-start py-5 xs:flex-col lg:items-start'>
       <div className='flex flex-col xs:items-center sm:item-start md:items-start lg:items-start sm:ml-10'>
         <h1 className='font-poppins text-xl font-semibold'>
           The Retail Insights
@@ -57,7 +65,7 @@ export const CompanyCard = () => {
         <section className='hidden lg:inline-block py-1 xl:mt-0'>
           {renderClientInfo()}
         </section>
-        <section className='hidden md:inline-block'>
+        <section className='flex overflow-x-auto scrollbar-thin w-4/5 flex-nowrap'>
           {renderChip('Next.js')}
           {renderChip('React')}
           {renderChip('React Native')}
@@ -69,6 +77,7 @@ export const CompanyCard = () => {
           {renderChip('Figma')}
           {renderChip('Prismic')}
           {renderChip('Prismatic')}
+          {renderChip('NodeJs')}
         </section>
       </div>
       <Image
@@ -78,7 +87,7 @@ export const CompanyCard = () => {
         height={200}
         className='rounded-lg'
       />
-    </section>
+    </div>
   );
 };
 
