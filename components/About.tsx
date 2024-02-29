@@ -10,7 +10,7 @@ const About = () => {
   };
 
   return (
-    <div className='flex gap-2 md:items-end justify-between padding-container flex-col lg:px-10 bg-yellow-10 rounded-lg py-5 xl:mx-10'>
+    <div className='flex gap-2 md:items-end justify-between padding-container flex-col lg:px-10 bg-yellow-10 rounded-lg py-5 xl:mx-10 hover:bg-green-10'>
       <h1 className='font-poppins font-semibold sm:text-center xs:text-center lg:text-lg'>
         Development Journey: 2020 - Present
       </h1>

@@ -1,91 +1,61 @@
+import { EXP_COMPANIES } from '@/constants';
 import Image from 'next/image';
 import React from 'react';
 
-export const CompanyCard = () => {
+export const CompanyCard = ({ data }) => {
   const renderChip = (text: string) => {
     return (
-      <span className='px-2 mr-2 my-1 bg-blue-300 py-1 rounded-md text-xs inline-block min-w-max font-duospace'>
+      <span className='px-2 mr-2 my-1 bg-blue-300 py-1 rounded-md text-xs inline-block min-w-max font-duospace hover:bg-yellow-10'>
         {text}
       </span>
     );
   };
 
-  const renderClientInfo = () => {
+  const renderClientInfo = (item: any): any => {
     return (
       <>
         <div className='flex-row flex gap-4'>
-          <Image
-            src={'/spar_logo.jpg'}
-            width={100}
-            height={100}
-            alt={'spar_logo'}
-            className='rounded-md'
-            layout='responsive'
-            style={{ objectFit: 'contain' }}
-          />
-          <Image
-            src={'/apollo_logo.png'}
-            width={100}
-            height={100}
-            alt={'apollo_logo'}
-            className='rounded-md'
-            layout='responsive'
-            style={{ objectFit: 'contain' }}
-          />
-          <Image
-            src={'/twd_logo.png'}
-            width={100}
-            height={100}
-            alt={'twd_logo'}
-            className='rounded-md'
-            layout='responsive'
-            style={{ objectFit: 'contain' }}
-          />
-          <Image
-            src={'/una_brands_logo.jpg'}
-            width={100}
-            height={100}
-            alt={'una_brands_logo'}
-            className='rounded-md'
-            layout='responsive'
-            style={{ objectFit: 'contain' }}
-          />
+          {item?.map((o: any) => {
+            return (
+              <>
+                <Image
+                  src={o?.src || ''}
+                  width={100}
+                  height={100}
+                  alt={o.alt || ''}
+                  className='rounded-md'
+                  layout='responsive'
+                  style={{ objectFit: 'contain' }}
+                />
+              </>
+            );
+          })}
         </div>
       </>
     );
   };
 
   return (
-    <div className='flex sm:flex-row justify-center items-center sm:item-start py-5 xs:flex-col lg:items-start'>
-      <div className='flex flex-col xs:items-center sm:item-start md:items-start lg:items-start sm:ml-10'>
-        <h1 className='font-poppins text-xl font-semibold'>
-          The Retail Insights
-        </h1>
-        <p className='text-sm'>Jan 2022 - Present</p>
+    <div className='flex sm:flex-row justify-center items-center py-5 xs:flex-col'>
+      <div className='flex flex-col items-center sm:ml-10 w-4/5'>
+        <h1 className='font-poppins text-xl font-semibold'>{data.title}</h1>
+        <p className='text-sm'>{data.timestamp}</p>
         <section className='hidden lg:inline-block py-1 xl:mt-0'>
-          {renderClientInfo()}
+          {renderClientInfo(data.clients)}
         </section>
-        <section className='flex overflow-x-auto scrollbar-thin w-4/5 flex-nowrap'>
-          {renderChip('Next.js')}
-          {renderChip('React')}
-          {renderChip('React Native')}
-          {renderChip('CMS')}
-          {renderChip('Redux')}
-          {renderChip('RTK Query')}
-          {renderChip('REST APIs')}
-          {renderChip('GraphQl')}
-          {renderChip('Figma')}
-          {renderChip('Prismic')}
-          {renderChip('Prismatic')}
-          {renderChip('NodeJs')}
+        <section className='flex overflow-x-auto scrollbar-thin md:w-11/12 xs:w-full flex-nowrap no-scrollbar'>
+          {data?.skills?.map((o: any) => {
+            return <>{renderChip(o)}</>;
+          })}
         </section>
       </div>
       <Image
-        src={'/the_retail_insights_logo.jpeg'}
-        alt={'company-logo'}
+        src={data?.company_logo?.src}
+        alt={data?.company_logo?.alt}
         width={200}
         height={200}
         className='rounded-lg'
+        layout='responsive'
       />
     </div>
   );
@@ -94,11 +64,17 @@ export const CompanyCard = () => {
 const Experience = () => {
   return (
     <div className='flex gap-2 justify-between padding-container flex-col lg:px-10 rounded-lg md:px-0 py-5'>
-      <h1 className='font-poppins font-semibold text-center text-lg xl:text-xl'>
+      <h1 className='font-poppins font-semibold text-lg xl:text-xl'>
         Experience
       </h1>
       <div className='font-recoleta w-full items-start'>
-        <CompanyCard />
+        {EXP_COMPANIES.map((item) => {
+          return (
+            <>
+              <CompanyCard data={item} />
+            </>
+          );
+        })}
       </div>
     </div>
   );
